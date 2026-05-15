@@ -24,7 +24,7 @@ void process_string(char *str) {
 int main() {
     char str[MAX_LEN];
     printf("Enter a string: ");
-    fgets(str, MAX_LEN, stdin);
+    fgets(str, sizeof(str), stdin);
     str[strcspn(str, "\n")] = 0;
     process_string(str);
     printf("Processed string: %s\n", str);
